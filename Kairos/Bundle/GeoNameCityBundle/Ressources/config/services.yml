@@ -1,0 +1,10 @@
+parameters:
+#   MANAGERS
+    kairos_geo_name.model.geo_name_city.class: Kairos\Bundle\GeoNameBundle\Entity\GeoNameCity
+    kairos_geo_name.manager.geo_name_city.class: Kairos\Bundle\GeoNameBundle\Entity\Manager\GeoNameCityManager
+
+services:
+#   MANAGERS
+    kairos_geo_name.manager.geo_name_city:
+        class: %kairos_geo_name.manager.geo_name_city.class%
+        arguments: [@event_dispatcher, @doctrine.orm.entity_manager, %kairos_geo_name.model.geo_name_city.class%]

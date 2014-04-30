@@ -1,0 +1,28 @@
+{
+    "name": "kairos/geonamecity-bundle",
+    "type": "library",
+    "license": "MIT",
+    "description": "Geo Name City Bundle",
+    "keywords": ["geoname","geonamecity", "geo-name-city-bundle"],
+    "homepage": "https://github.com/kairosagency/geonamecity-bundle.git",
+    "authors": [
+        {
+            "name": "Matthiew",
+            "homepage": "https://github.com/Matthiew",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.3.*",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "1.2.*",
+        "creof/doctrine2-spatial": "dev-master",
+        "guzzle/guzzle": "3.8.*"
+    },
+    "autoload": {
+        "psr-0": { "Kairos\\Bundle\\GeoNameCityBundle": "" }
+    },
+    "target-dir": "Kairos/Bundle/GeoNameCityBundle",
+    "minimum-stability": "dev"
+}
