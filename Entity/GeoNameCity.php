@@ -20,7 +20,7 @@ namespace Kairos\Bundle\GeoNameCityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Kairos\GeoNameCityBundle\Model\GeoNameCity as AbstractGeoNameCity;
+use Kairos\Bundle\GeoNameCityBundle\Model\GeoNameCity as AbstractGeoNameCity;
 
 /**
  * @ORM\Table(name="geo_name_city", indexes={@ORM\Index(name="search_idx", columns={"coordinates"})})
