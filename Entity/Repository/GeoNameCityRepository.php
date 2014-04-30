@@ -1,6 +1,6 @@
 <?php
 
-namespace Kairos\Bundle\GeoNameBundle\Entity\Repository;
+namespace Kairos\Bundle\GeoNameCityBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
@@ -32,7 +32,7 @@ class GeoNameCityRepository extends EntityRepository
 
         try {
             $result = $query->getResult();
-            if (count($result) > 0 && $result[0][0] instanceof \Kairos\GeoNameBundle\Entity\GeoNameCity) {
+            if (count($result) > 0 && $result[0][0] instanceof \Kairos\GeoNameCityBundle\Entity\GeoNameCity) {
                 return $result[0][0];
             }
         } catch (\Exception $e) {
@@ -53,13 +53,13 @@ class GeoNameCityRepository extends EntityRepository
                         gnc.coordinates,
                         false
                       ) as distance
-                      FROM Kairos\GeoNameBundle\Entity\GeoNameCity gnc
+                      FROM Kairos\GeoNameCityBundle\Entity\GeoNameCity gnc
                       ORDER BY distance ASC
                       ';
         }
         elseif($this->_em->getConnection()->getDatabasePlatform()->getName() == 'mysql') {
             return 'SELECT gnc, (SQRT(POW(gnc.longitude - :lng , 2) + POW(gnc.latitude - :lat, 2)) * 100) as distance
-                      FROM Kairos\GeoNameBundle\Entity\GeoNameCity gnc
+                      FROM Kairos\GeoNameCityBundle\Entity\GeoNameCity gnc
                       ORDER BY distance ASC
                       ';
         }

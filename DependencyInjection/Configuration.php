@@ -1,6 +1,6 @@
 <?php
 
-namespace Kairos\Bundle\GeoNameBundle\DependencyInjection;
+namespace Kairos\Bundle\GeoNameCityBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

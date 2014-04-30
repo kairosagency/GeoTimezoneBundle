@@ -1,9 +1,9 @@
 <?php
-namespace Kairos\Bundle\GeoNameBundle\Entity\Manager;
+namespace Kairos\Bundle\GeoNameCityBundle\Entity\Manager;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
-use Kairos\GeoNameBundle\Model\GeoNameCityInterface;
+use Kairos\GeoNameCityBundle\Model\GeoNameCityInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class GeoNameCityManager
@@ -80,7 +80,7 @@ class GeoNameCityManager
     }
 
     /**
-     * @param \Kairos\GeoNameBundle\Model\GeoNameCityInterface $geoNameCity
+     * @param \Kairos\GeoNameCityBundle\Model\GeoNameCityInterface $geoNameCity
      */
     public function save(GeoNameCityInterface $geoNameCity)
     {
@@ -89,7 +89,7 @@ class GeoNameCityManager
     }
 
     /**
-     * @param \Kairos\GeoNameBundle\Model\GeoNameCityInterface $geoNameCity
+     * @param \Kairos\GeoNameCityBundle\Model\GeoNameCityInterface $geoNameCity
      */
     public function remove(GeoNameCityInterface $geoNameCity)
     {

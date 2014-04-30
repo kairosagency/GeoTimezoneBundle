@@ -1,5 +1,5 @@
 <?php
-namespace Kairos\Bundle\GeoNameBundle\Command;
+namespace Kairos\Bundle\GeoNameCityBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use CrEOF\Spatial\PHP\Types\Geometry\Point;
-use Kairos\GeoNameBundle\Entity\GeoNameCity;
+use Kairos\GeoNameCityBundle\Entity\GeoNameCity;
 
 class UpdateGeoNameCityCommand extends ContainerAwareCommand
 {
@@ -137,7 +137,7 @@ EOT
      */
     private function resetGeoNameCityTable()
     {
-        $cmd = $this->em->getClassMetadata('Kairos\GeoNameBundle\Entity\GeoNameCity');
+        $cmd = $this->em->getClassMetadata('Kairos\GeoNameCityBundle\Entity\GeoNameCity');
         $connection = $this->em->getConnection();
         $connection->beginTransaction();
 
