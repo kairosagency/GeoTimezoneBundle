@@ -32,7 +32,7 @@ class GeoNameCityRepository extends EntityRepository
 
         try {
             $result = $query->getResult();
-            if (count($result) > 0 && $result[0][0] instanceof \Kairos\GeoNameCityBundle\Entity\GeoNameCity) {
+            if (count($result) > 0 && $result[0][0] instanceof \Kairos\Bundle\GeoNameCityBundle\Entity\GeoNameCity) {
                 return $result[0][0];
             }
         } catch (\Exception $e) {

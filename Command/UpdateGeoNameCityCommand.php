@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use CrEOF\Spatial\PHP\Types\Geometry\Point;
-use Kairos\GeoNameCityBundle\Entity\GeoNameCity;
+use Kairos\Bundle\GeoNameCityBundle\Entity\GeoNameCity;
 
 class UpdateGeoNameCityCommand extends ContainerAwareCommand
 {

@@ -3,7 +3,7 @@ namespace Kairos\Bundle\GeoNameCityBundle\Entity\Manager;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
-use Kairos\GeoNameCityBundle\Model\GeoNameCityInterface;
+use Kairos\Bundle\GeoNameCityBundle\Model\GeoNameCityInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class GeoNameCityManager
