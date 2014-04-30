@@ -23,6 +23,5 @@
     "autoload": {
         "psr-0": { "Kairos\\Bundle\\GeoNameCityBundle": "" }
     },
-    "target-dir": "Kairos/Bundle/GeoNameCityBundle",
-    "minimum-stability": "dev"
+    "target-dir": "Kairos/Bundle/GeoNameCityBundle"
 }
