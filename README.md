@@ -1,2 +1,2 @@
-GeoNameCityBundle
+GeoTimezoneBundle
 =================

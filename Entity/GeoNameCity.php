@@ -16,15 +16,15 @@
  * Google group : http://groups.google.com/group/geonames
  *
  */
-namespace Kairos\Bundle\GeoNameCityBundle\Entity;
+namespace Kairos\Bundle\GeoTimezoneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Kairos\Bundle\GeoNameCityBundle\Model\GeoNameCity as AbstractGeoNameCity;
+use Kairos\Bundle\GeoTimezoneBundle\Model\GeoNameCity as AbstractGeoNameCity;
 
 /**
  * @ORM\Table(name="geo_name_city", indexes={@ORM\Index(name="search_idx", columns={"coordinates"})})
- * @ORM\Entity(repositoryClass="Kairos\GeoNameCityBundle\Entity\Repository\GeoNameCityRepository")
+ * @ORM\Entity(repositoryClass="Kairos\Bundle\GeoTimezoneBundle\Entity\Repository\GeoNameCityRepository")
  */
 class GeoNameCity extends AbstractGeoNameCity
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kairos\Bundle\GeoNameCityBundle\Entity\Repository;
+namespace Kairos\Bundle\GeoTimezoneBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
@@ -20,7 +20,7 @@ class GeoNameCityRepository extends EntityRepository
      * @param $lat
      * @return bool
      */
-    public function getGeoNameCityClosest($lng, $lat)
+    public function getClosestGeoTimezone($lng, $lat)
     {
         $sqlQuery = $this->buildGeoNameCityClosestQuery();
         $query = $this->_em->createQuery($sqlQuery);
@@ -32,7 +32,7 @@ class GeoNameCityRepository extends EntityRepository
 
         try {
             $result = $query->getResult();
-            if (count($result) > 0 && $result[0][0] instanceof \Kairos\Bundle\GeoNameCityBundle\Entity\GeoNameCity) {
+            if (count($result) > 0 && $result[0][0] instanceof \Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity) {
                 return $result[0][0];
             }
         } catch (\Exception $e) {
@@ -53,13 +53,13 @@ class GeoNameCityRepository extends EntityRepository
                         gnc.coordinates,
                         false
                       ) as distance
-                      FROM Kairos\GeoNameCityBundle\Entity\GeoNameCity gnc
+                      FROM Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity gnc
                       ORDER BY distance ASC
                       ';
         }
         elseif($this->_em->getConnection()->getDatabasePlatform()->getName() == 'mysql') {
             return 'SELECT gnc, (SQRT(POW(gnc.longitude - :lng , 2) + POW(gnc.latitude - :lat, 2)) * 100) as distance
-                      FROM Kairos\GeoNameCityBundle\Entity\GeoNameCity gnc
+                      FROM Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity gnc
                       ORDER BY distance ASC
                       ';
         }

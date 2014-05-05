@@ -1,5 +1,5 @@
 <?php
-namespace Kairos\Bundle\GeoNameCityBundle\ORM\Query\AST\Functions\Mysql;
+namespace Kairos\Bundle\GeoTimezoneBundle\ORM\Query\AST\Functions\Mysql;
 
 use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\Parser;
@@ -8,7 +8,7 @@ use Doctrine\ORM\Query\AST\Functions\FunctionNode;
 
 /**
  * Class Pow
- * @package Kairos\GeoNameCityBundle\ORM\Query\AST\Functions\Mysql
+ * @package Kairos\GeoTimezoneBundle\ORM\Query\AST\Functions\Mysql
  */
 class Pow extends FunctionNode
 {

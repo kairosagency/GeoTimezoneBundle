@@ -1,5 +1,5 @@
 <?php
-namespace Kairos\Bundle\GeoNameCityBundle\Command;
+namespace Kairos\Bundle\GeoTimezoneBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use CrEOF\Spatial\PHP\Types\Geometry\Point;
-use Kairos\Bundle\GeoNameCityBundle\Entity\GeoNameCity;
+use Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity;
 
 class UpdateGeoNameCityCommand extends ContainerAwareCommand
 {
@@ -54,7 +54,7 @@ EOT
     {
         try {
             // Download and get the geo name city file from the source url
-            $sourceUrl = $this->getContainer()->getParameter("kairos_geo_name.source_url");
+            $sourceUrl = $this->getContainer()->getParameter("geo_timezone.source_url");
             $output->writeln(sprintf('Downloading geo name city file from the source url:  <comment>%s</comment>', $sourceUrl));
             $file = $this->downloadAndGetGNCFile($sourceUrl);
 
@@ -137,7 +137,7 @@ EOT
      */
     private function resetGeoNameCityTable()
     {
-        $cmd = $this->em->getClassMetadata('Kairos\GeoNameCityBundle\Entity\GeoNameCity');
+        $cmd = $this->em->getClassMetadata('Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity');
         $connection = $this->em->getConnection();
         $connection->beginTransaction();
 
@@ -160,7 +160,7 @@ EOT
      */
     private function downloadAndGetGNCFile($sourceUrl)
     {
-        $cacheDir = $this->getContainer()->getParameter("kernel.cache_dir") . '/geo_name_city';
+        $cacheDir = $this->getContainer()->getParameter("kernel.cache_dir") . '/geonamecity';
 
         // Create the cache dir to keep the downloaded file
         @mkdir($cacheDir);

@@ -1,5 +1,5 @@
 {
-    "name": "kairos/geonamecity-bundle",
+    "name": "kairos/geotimezone-bundle",
     "type": "library",
     "license": "MIT",
     "description": "Geo Name City Bundle",
@@ -21,7 +21,7 @@
         "guzzle/guzzle": "3.8.*"
     },
     "autoload": {
-        "psr-0": { "Kairos\\Bundle\\GeoNameCityBundle": "" }
+        "psr-0": { "Kairos\\Bundle\\GeoTimezoneBundle": "" }
     },
-    "target-dir": "Kairos/Bundle/GeoNameCityBundle"
+    "target-dir": "Kairos/Bundle/GeoTimezoneBundle"
 }

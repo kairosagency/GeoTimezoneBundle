@@ -1,7 +1,7 @@
 parameters:
 #   MANAGERS
-    kairos_geo_name.model.geo_name_city.class: Kairos\Bundle\GeoNameCityBundle\Entity\GeoNameCity
-    kairos_geo_name.manager.geo_name_city.class: Kairos\Bundle\GeoNameCityBundle\Entity\Manager\GeoNameCityManager
+    kairos_geo_name.model.geo_name_city.class: Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity
+    kairos_geo_name.manager.geo_name_city.class: Kairos\Bundle\GeoTimezoneBundle\Entity\Manager\GeoNameCityManager
 
 services:
 #   MANAGERS

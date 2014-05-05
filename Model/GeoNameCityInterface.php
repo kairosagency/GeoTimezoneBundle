@@ -1,5 +1,5 @@
 <?php
-namespace Kairos\Bundle\GeoNameCityBundle\Model;
+namespace Kairos\Bundle\GeoTimezoneBundle\Model;
 
 use CrEOF\Spatial\PHP\Types\Geometry\Point;
 

@@ -1,9 +1,9 @@
 <?php
-namespace Kairos\Bundle\GeoNameCityBundle\Entity\Manager;
+namespace Kairos\Bundle\GeoTimezoneBundle\Entity\Manager;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
-use Kairos\Bundle\GeoNameCityBundle\Model\GeoNameCityInterface;
+use Kairos\Bundle\GeoTimezoneBundle\Model\GeoNameCityInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class GeoNameCityManager
@@ -80,7 +80,7 @@ class GeoNameCityManager
     }
 
     /**
-     * @param \Kairos\GeoNameCityBundle\Model\GeoNameCityInterface $geoNameCity
+     * @param \Kairos\Bundle\GeoTimezoneBundle\Model\GeoNameCityInterface $geoNameCity
      */
     public function save(GeoNameCityInterface $geoNameCity)
     {
@@ -89,7 +89,7 @@ class GeoNameCityManager
     }
 
     /**
-     * @param \Kairos\GeoNameCityBundle\Model\GeoNameCityInterface $geoNameCity
+     * @param \Kairos\Bundle\GeoTimezoneBundle\Model\GeoNameCityInterface $geoNameCity
      */
     public function remove(GeoNameCityInterface $geoNameCity)
     {
@@ -104,8 +104,8 @@ class GeoNameCityManager
      * @param $lat
      * @return mixed
      */
-    public function getGeoNameCityClosest($lng, $lat)
+    public function getClosestGeoTimezone($lng, $lat)
     {
-        return $this->getRepository()->getGeoNameCityClosest($lng, $lat);
+        return $this->getRepository()->getClosestGeoTimezone($lng, $lat);
     }
 }
