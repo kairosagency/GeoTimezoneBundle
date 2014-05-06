@@ -20,7 +20,7 @@ class GeoNameCityRepository extends EntityRepository
      * @param $lat
      * @return bool
      */
-    public function getClosestGeoTimezone($lng, $lat)
+    public function getClosestGeoTimezone($lat, $lng)
     {
         $sqlQuery = $this->buildGeoNameCityClosestQuery();
         $query = $this->_em->createQuery($sqlQuery);

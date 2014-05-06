@@ -100,12 +100,12 @@ class GeoNameCityManager
     /**
      * Get the geo name city object closest from the longitude and latitude given
      *
-     * @param $lng
      * @param $lat
+     * @param $lng
      * @return mixed
      */
-    public function getClosestGeoTimezone($lng, $lat)
+    public function getClosestGeoTimezone($lat, $lng)
     {
-        return $this->getRepository()->getClosestGeoTimezone($lng, $lat);
+        return $this->getRepository()->getClosestGeoTimezone($lat, $lng);
     }
 }
