@@ -20,9 +20,6 @@
         "creof/doctrine2-spatial": "dev-master",
         "guzzle/guzzle": "3.8.*"
     },
-    "require-dev": {
-        "doctrine/data-fixtures": "dev-master"
-    },
     "autoload": {
         "psr-0": { "Kairos\\Bundle\\GeoTimezoneBundle": "" }
     },
