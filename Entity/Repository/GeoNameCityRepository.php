@@ -33,7 +33,8 @@ class GeoNameCityRepository extends EntityRepository
         try {
             $result = $query->getResult();
             if (count($result) > 0 && $result[0][0] instanceof \Kairos\Bundle\GeoTimezoneBundle\Entity\GeoNameCity) {
-                return $result[0][0];
+                $geoNameCity = $result[0][0];
+                return $geoNameCity->getTimezone();
             }
         } catch (\Exception $e) {
             exit($e->getMessage());
