@@ -17,7 +17,7 @@
         "symfony/framework-bundle": "~2.3",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.*",
-        "creof/doctrine2-spatial": "dev-master",
+        "creof/doctrine2-spatial": "~1.1",
         "guzzle/guzzle": "~3.8"
     },
     "autoload": {
